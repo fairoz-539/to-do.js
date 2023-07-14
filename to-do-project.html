@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-project</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .main-div,.main-div1{
+            display: grid;
+            grid-template-columns:200px 150px 100px ;
+            column-gap: 10px;
+            row-gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .main-div1{
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+        .nameinput , .dateinput{
+            font-size: 15px;
+            padding: 6px;
+            cursor: pointer;
+        }
+        .btn{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .btn1{
+            background-color: darkred;
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <p>Todo List</p>
+    <div class="main-div1">
+        <input placeholder="todo name" class="js-name-input nameinput">
+        <input type="date" class="js-due-date-input dateinput">
+        <button onclick = "addTodo();" class="btn">Add</button>
+    </div>
+    <div class="js-list main-div"></div>
+
+    
+    <script src="scripts/todo.js"></script>
+</body>
+</html>
